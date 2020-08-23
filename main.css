@@ -1,0 +1,81 @@
+:root {
+	font-size: 16px;
+	--edge-margin: 0.25em;
+}
+
+@media screen and (min-width: 650px) {
+	:root {
+		--edge-margin: 1em;
+	}
+}
+
+a {
+	color: #da532c;
+}
+
+body {
+	margin: var(--edge-margin);
+	margin-bottom: 0;
+	padding: 0 !important;
+}
+
+main {
+	position: fixed;
+	height: calc(99% - var(--edge-margin));
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - var(--edge-margin) * 2);
+}
+
+pre {
+	white-space: pre-wrap;
+	margin: 0;
+	overflow-wrap: break-word;
+}
+
+#history {
+	flex-grow: 1;
+	overflow-y: auto;
+}
+
+.history-item {
+	margin-top: var(--edge-margin);
+}
+
+.history-row {
+	padding: 0 calc(var(--edge-margin) / 2);
+	cursor: pointer;
+}
+
+.history-row:hover:not(.no-highlight), .history-row.highlighted {
+	background-color: #756d56;
+}
+
+.output-error {
+	color: #cf1c1c;
+}
+
+.no-highlight {
+	cursor: auto;
+}
+
+#editor > input {
+	display: block;
+	width: 100%;
+	margin: auto;
+	padding: 0.25em 0.5em;
+}
+
+#editor {
+	margin-top: var(--edge-margin);
+}
+
+#copyrightMessage {
+	padding: 0.25rem;
+	text-align: center;
+	font-size: 0.5rem;
+}
+
+#copyrightMessage a {
+	color: inherit;
+}

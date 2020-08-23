@@ -1,0 +1,19 @@
+{
+    "name": "",
+    "short_name": "",
+    "icons": [
+        {
+            "src": "/utilities/calculator/icons/android-chrome-192x192.png?v=3",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/utilities/calculator/icons/android-chrome-512x512.png?v=3",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2cdac9",
+    "background_color": "#2cdac9",
+    "display": "standalone"
+}

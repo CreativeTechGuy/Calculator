@@ -1,0 +1,124 @@
+/* Core HTML */
+
+body {
+	margin: 0;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	line-height: 1.5;
+	background-color: #f3f3f3;
+	text-align: left;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	font-size: inherit;
+}
+
+table {
+	border: 0;
+	border-collapse: collapse;
+}
+
+td {
+	vertical-align: top;
+}
+
+th,
+td {
+	text-align: inherit;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+
+pre,
+code {
+	font-family: "Courier New", Courier, monospace;
+}
+
+hr {
+	border-style: solid;
+	border-width: 0.25rem;
+	border-color: #135cff;
+	border-top: 1px solid #135cff;
+	margin-bottom: 0.25rem;
+	height: 0;
+}
+
+input[type="button"],
+input[type="submit"] {
+	cursor: pointer;
+}
+
+button, .button {
+	background: #e4e4e4;
+	border: 1px solid #aaaaaa;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #0041d2;
+	background-color: transparent;
+}
+
+a:not(.plain):hover {
+	text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1rem;
+}

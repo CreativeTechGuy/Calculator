@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="calculator, math, javascript, speed, crunch, app, fast">
+	<meta name="description" content="Fast and powerful calculator. Available right in your browser or offline once installed to your device.">
+	<meta name="author" content="Jason O'Neill">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="manifest.json" rel="manifest">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Calculator">
+	<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+	<title>Calculator</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="icons/site.webmanifest">
+	<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#da532c">
+	<link rel="shortcut icon" href="icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+	<meta name="theme-color" content="#2cdac9">
+
+	<meta property="og:title" content="Calculator">
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="https://creativetechguy.github.io/Calculator">
+	<meta property="og:description" content="Fast and powerful calculator. Available right in your browser or offline once installed to your device.">
+	<meta property="og:image" content="https://creativetechguy.github.io/icons/android-chrome-512x512.png">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@JasonONeillCTG">
+	<meta name="twitter:title" content="Calculator">
+	<meta name="twitter:description" content="Fast and powerful calculator. Available right in your browser or offline once installed to your device.">
+	<meta name="twitter:image" content="https://creativetechguy.github.io/icons/android-chrome-512x512.png">
+
+	<link href="reset.css" rel="stylesheet">
+	<link href="highlight/monokai-sublime.css" rel="stylesheet">
+	<link href="main.css" rel="stylesheet">
+</head>
+<body class="hljs">
+	<main>
+		<div id="history">
+			<template data-template-name="historyRow">
+				<div class="history-item">
+					<div class="history-row history-input"><pre><code data-unsafe-inner-html="{{input}}"></code></pre></div>
+					<div class="history-row history-output {{outputClass}}"><pre><code>{{output}}</code></pre></div>
+				</div>
+			</template>
+			<template data-template-name="historyRowList">
+				<div class="history-item">
+					<div class="history-row history-input no-highlight"><pre><code data-unsafe-inner-html="{{input}}"></code></pre></div>
+					<div class="history-row history-output no-highlight" data-for-each="{{list}}"><pre><code>{{item}}</code></pre></div>
+				</div>
+			</template>
+			<template data-template-name="historyRowListInnerHTML">
+				<div class="history-item">
+					<div class="history-row history-input no-highlight"><pre><code data-unsafe-inner-html="{{input}}"></code></pre></div>
+					<div class="history-row history-output no-highlight" data-for-each="{{list}}"><pre><code data-unsafe-inner-html="{{item}}"></code></pre></div>
+				</div>
+			</template>
+		</div>
+		<div id="editor">
+			<div id="pwaInstallPrompt" style="display: none; text-align: center; margin: 0.5em 0;">
+				Did you know? You can install this calculator to be used offline.<br>
+				<button name="accept">Install</button><span style="padding-left: 3em;"></span><button name="deny">Don't Install</button>
+			</div>
+			<input type="text" id="input" placeholder="Type math expression here and press enter to evaluate" autofocus>
+			<div id="copyrightMessage">
+				<a href="https://creativetechguy.com" target="_blank">Copyright <span id="copyrightYear"></span> Jason O'Neill</a>
+				<script>
+					document.getElementById("copyrightYear").innerText = new Date().getFullYear();
+				</script>
+			</div>
+		</div>
+	</main>
+
+	<script src="esprima.min.js"></script>
+	<script src="highlight/highlight.min.js"></script>
+	<script src="Templates.js"></script>
+	<script src="keyNormalize.js"></script>
+	<script src="pwaInstall.js"></script>
+	<script src="script.js"></script>
+
+
+	<noscript>
+		<div class="error-popup-container">
+			<p class="error-popup-message">This page, along with all of my other web games and utilities, require JavaScript.<br>Please enable JavaScript in your browser and refresh to continue.</p>
+		</div>
+	</noscript>
+</body>
+</html>
