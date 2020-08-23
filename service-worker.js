@@ -1,26 +1,26 @@
 const VERSION_NUMBER = "1";
 
 const FILES_TO_CACHE = [
-	"Calculator/reset.css",
-	"Calculator/highlight/monokai-sublime.css",
-	"Calculator/main.css",
-	"Calculator/highlight/highlight.min.js",
-	"Calculator/Templates.js",
-	"Calculator/keyNormalize.js",
-	"Calculator/pwaInstall.js",
-	"Calculator/script.js",
-	"Calculator/esprima.min.js",
-	"Calculator/manifest.json",
-	"Calculator/icons/android-chrome-192x192.png",
-	"Calculator/icons/android-chrome-512x512.png",
-	"Calculator/icons/favicon.ico",
-	"Calculator/icons/favicon-16x16.png",
-	"Calculator/icons/favicon-32x32.png",
-	"Calculator/icons/apple-touch-icon.png",
-	"Calculator/icons/browserconfig.xml",
-	"Calculator/icons/mstile-150x150.png",
-	"Calculator/icons/site.webmanifest",
-	"Calculator/icons/safari-pinned-tab.svg"
+	"reset.css",
+	"highlight/monokai-sublime.css",
+	"main.css",
+	"highlight/highlight.min.js",
+	"Templates.js",
+	"keyNormalize.js",
+	"pwaInstall.js",
+	"script.js",
+	"esprima.min.js",
+	"manifest.json",
+	"icons/android-chrome-192x192.png",
+	"icons/android-chrome-512x512.png",
+	"icons/favicon.ico",
+	"icons/favicon-16x16.png",
+	"icons/favicon-32x32.png",
+	"icons/apple-touch-icon.png",
+	"icons/browserconfig.xml",
+	"icons/mstile-150x150.png",
+	"icons/site.webmanifest",
+	"icons/safari-pinned-tab.svg"
 ];
 
 const CACHE_NAME = "offline-first-cache-" + hashArray(FILES_TO_CACHE.concat(VERSION_NUMBER));
