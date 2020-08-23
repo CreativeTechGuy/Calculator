@@ -44,6 +44,7 @@ let _ans = null;
 			document.querySelectorAll(".history-row:not(.no-highlight)")[arrowIndex].click();
 		}
 		if (key === "arrowup" || key === "arrowdown") {
+			evt.preventDefault();
 			inputElem.blur();
 			const rows = document.querySelectorAll(".history-row:not(.no-highlight)");
 			if (arrowIndex === null) {
