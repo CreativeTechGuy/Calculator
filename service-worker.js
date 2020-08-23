@@ -1,7 +1,7 @@
 const VERSION_NUMBER = "1";
 
 const FILES_TO_CACHE = [
-	"./",
+	"index.html",
 	"reset.css",
 	"highlight/monokai-sublime.css",
 	"main.css",
