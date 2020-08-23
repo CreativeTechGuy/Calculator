@@ -115,7 +115,7 @@ let _ans = null;
 		}
 		try {
 			if (isAssignment && overwritesWindow) {
-				throw new Error("Assignment to a constant letiable");
+				throw new Error("Assignment to a constant variable");
 			}
 			result = eval(escapedScript || value);
 		} catch (e) {
@@ -159,7 +159,7 @@ let _ans = null;
 			}
 			return true;
 		}
-		if (input === "lets" || input === "ls" || input === "list") {
+		if (input === "vars" || input === "ls" || input === "list") {
 			const list = [];
 			const customVariables = getCustomVariables();
 			for (let i = 0; i < customVariables.length; i++) {
@@ -178,14 +178,14 @@ let _ans = null;
 		if (input === "help" || input === "?" || input === "man" || input === "instruction" || input === "instructions" || input === "menu") {
 			const items = [
 				{ item: "• Type an expression in the box below and press enter to evaluate" },
-				{ item: "• You can define letiables and reference them later (ex: \"amount = 1423\")" },
-				{ item: "• \"ans\" is a magic letiable which always holds the result of the last successful evaluation" },
+				{ item: "• You can define variables and reference them later (ex: \"amount = 1423\")" },
+				{ item: "• \"ans\" is a magic variable which always holds the result of the last successful evaluation" },
 				{ item: "• You can use any function/constant which is part of <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math\" target=\"_blank\" rel=\"noopener noreferrer\">JavaScript's Math Object</a> (ex: \"round(pow(PI, 3))\")" },
 				{ item: "• You can click on a previous result to copy it to the input box. Alternatively use up/down and enter." },
 				{ item: "----------" },
 				{ item: "The following commands are available:" },
-				{ item: "• clear   - erases all history and saved letiables" },
-				{ item: "• lets    - lists all defined letiables and their values" },
+				{ item: "• clear   - erases all history and saved variables" },
+				{ item: "• vars    - lists all defined variables and their values" },
 				{ item: "• help    - view this help information" }
 			];
 			if (canInstall()) {
