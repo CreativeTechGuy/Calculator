@@ -54,13 +54,18 @@ self.addEventListener("activate", (evt) => {
 });
 
 self.addEventListener("fetch", (evt) => {
-	const url = evt.request.url.replace("https://creativetechguy.github.io", "").split("?")[0];
-	if (!FILES_TO_CACHE.includes(url)) {
+	let url = evt.request.url.split("?")[0];
+	let path = url.replace("https://creativetechguy.github.io/Calculator/", "");
+	if (path === "") {
+		path = "index.html";
+		url += "index.html";
+	}
+	if (!FILES_TO_CACHE.includes(path)) {
 		return;
 	}
 	evt.respondWith(
 		caches.open(CACHE_NAME).then((cache) => {
-			return cache.match(evt.request, { ignoreSearch: evt.request.url.includes("?v=") }).then((response) => {
+			return cache.match(url).then((response) => {
 				const fetchPromise = fetchNoCache(url).then((networkResponse) => {
 					cache.put(url, networkResponse.clone());
 					return networkResponse;

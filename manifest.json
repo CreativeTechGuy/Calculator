@@ -14,7 +14,7 @@
 		}
 	],
 	"scope": "/Calculator/",
-	"start_url": "/Calculator/index.html",
+	"start_url": "/Calculator/",
 	"display": "standalone",
 	"background_color": "#2cdac9",
 	"theme_color": "#da532c"
