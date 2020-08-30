@@ -1,4 +1,4 @@
-const VERSION_NUMBER = "1";
+const VERSION_NUMBER = "2";
 
 const FILES_TO_CACHE = [
 	"index.html",
